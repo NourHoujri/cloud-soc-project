@@ -1,0 +1,47 @@
+# Incident Response Workflow
+
+This section outlines the SOC-style investigation and response process used in the lab.
+
+---
+
+## Alert Triage
+
+- Alerts are generated in ELK based on detection rules
+- Alerts are forwarded to osTicket
+- Each ticket includes:
+  - Rule name
+  - Timestamp
+  - Source IP
+  - Link to the relevant Kibana alert
+
+---
+
+## Investigation Process
+
+When a ticket is opened:
+1. The alert link is copied from the ticket
+2. The link redirects directly to the ELK alert
+3. Log data is reviewed in Kibana
+4. Source, target, and behavior are analyzed
+
+This allows rapid validation of suspicious activity.
+
+---
+
+## Response Actions
+
+In this lab environment, response actions focus on analysis rather than containment.
+Actions include:
+- Confirming malicious behavior
+- Identifying affected systems
+- Reviewing attacker actions
+
+No automated remediation was applied, as the goal was detection and investigation training.
+
+---
+
+## Lessons from Incident Handling
+
+- Alert-to-ticket workflows improve investigation speed
+- Centralized logging simplifies correlation
+- Not all detections require immediate response, but all require validation
