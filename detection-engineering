@@ -1,0 +1,56 @@
+# Detection Engineering
+
+This section documents how malicious activity was detected using centralized logging and alerting within the ELK stack.
+
+---
+
+## Data Sources
+
+- Linux authentication logs
+- Windows event logs
+- Network and process telemetry
+- Mythic C2 behavioral indicators
+
+All logs were forwarded to the ELK stack for correlation and analysis.
+
+---
+
+## SSH Activity Detection
+
+Detection rules were created to identify suspicious SSH authentication behavior based on:
+- Failed login attempts
+- Repeated authentication patterns
+- Unusual source activity
+
+Alerts were successfully generated and validated in Kibana.
+
+---
+
+## RDP Brute-Force Detection
+
+RDP authentication events from the Windows target were analyzed to detect brute-force behavior.
+Detection logic identified:
+- Multiple failed login attempts
+- Repeated authentication attempts against privileged accounts
+
+An alert was triggered and forwarded to osTicket, creating an investigation ticket.
+
+---
+
+## Mythic C2 Detection
+
+C2-related activity was detected in ELK based on behavioral indicators.
+Although an osTicket ticket was not generated for this detection, the alert was confirmed in Kibana.
+
+By copying the alert query into Discover, the Mythic C2 agent activity was successfully identified and validated.
+
+---
+
+## Alert Validation
+
+For each alert:
+- The detection rule was verified
+- Source IP and timestamps were reviewed
+- Investigation links were used to pivot directly into Kibana
+
+This confirmed that detection logic was functioning as expected.
