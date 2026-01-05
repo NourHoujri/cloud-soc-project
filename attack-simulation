@@ -1,0 +1,43 @@
+# Attack Simulation
+
+This section documents the adversary techniques simulated in the lab environment.
+All attacks were executed in a controlled cloud lab for detection validation purposes.
+
+---
+
+## RDP Brute-Force Attack
+
+- **Target:** Windows Server (RDP enabled)
+- **Technique:** Credential brute-force over RDP
+- **Tool Used:** Hydra
+
+The attack simulated repeated authentication attempts against the Windows target.
+After successful authentication, an RDP session was established to validate access.
+
+This activity generated authentication logs that were forwarded to the ELK stack for detection.
+
+---
+
+## Mythic C2 Agent Execution
+
+- **Framework:** Mythic C2
+- **Agent:** Apollo
+- **Target:** Windows system
+
+After deployment of the Apollo agent, a command-and-control channel was successfully established between the compromised host and the Mythic server.
+
+Post-exploitation activity included:
+- Host enumeration
+- File system access
+- File retrieval from the target system
+
+A file containing a password was retrieved, demonstrating how sensitive data can be accessed once a system is compromised.
+
+---
+
+## Purpose of Attack Simulation
+
+The goal of these simulations was not exploitation itself, but to:
+- Generate realistic telemetry
+- Validate detection rules
+- Test alerting and SOC workflows
