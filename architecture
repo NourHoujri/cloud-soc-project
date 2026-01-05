@@ -1,0 +1,78 @@
+# Project Architecture – NoursProject
+
+> The environment is intentionally permissive at the network level to support full attack and detection visibility.
+
+## Overview
+This project represents a cloud-based security monitoring and detection lab deployed on Vultr. 
+It includes centralized logging with ELK, adversary simulation using Mythic C2, and Windows/Linux target systems.
+The environment is designed for controlled testing, detection validation, and alert-to-ticket workflows.
+
+---
+
+## Cloud Environment
+
+- **Cloud Provider:** Vultr
+- **Deployment Model:** Multi-VM cloud lab
+
+### Deployed Instances
+
+| VM Name                  | OS       | Role |
+|--------------------------|----------|------|
+| NoursProject-ELK         | Ubuntu   | Log aggregation, SIEM, alerting |
+| NoursProject-FLEET       | Ubuntu   | Fleet / agent management |
+| NoursProject-MYTHIC      | Ubuntu   | C2 server for adversary simulation |
+| NoursProject-Linux       | Ubuntu   | Linux target system |
+| NoursProject-WIN         | Windows  | Windows target system |
+| NoursProject-osTicket    | Windows  | Ticketing and incident tracking |
+
+---
+
+## Networking & Access Model
+
+- All servers are deployed in Vultr within isolated cloud environments.
+- Public IPs are assigned for lab access and testing purposes.
+- **Broad port ranges (TCP 1–65335)** are allowed at the cloud firewall level **only for lab simulation and testing**.
+
+### Rationale
+Wide port access was intentionally configured to:
+- Avoid port-related interference during attack simulation
+- Allow dynamic C2 communication
+- Enable full visibility of network activity for detection engineering
+- Focus on monitoring and alerting rather than perimeter blocking
+
+---
+
+## Security Controls
+
+Although wide port ranges are allowed at the cloud firewall level:
+
+- Access is restricted using:
+  - Strong authentication
+  - SSH keys (Linux)
+  - Controlled credentials (Windows)
+- Servers are dedicated to lab use only
+- No production or sensitive data is hosted
+- Logging and monitoring are enabled across all systems
+
+This design reflects a **detection-first security model**, where visibility and response validation are prioritized over strict network filtering.
+
+---
+
+## Traffic Flow Summary
+
+- Attack traffic originates from controlled attacker systems
+- Logs are forwarded to the ELK stack
+- Detection rules trigger alerts in Kibana
+- Alerts are automatically forwarded to osTicket
+- Tickets are reviewed and investigated by the analyst
+
+---
+
+## Notes
+
+This architecture is intentionally permissive to support:
+- SOC training
+- Detection engineering
+- Cloud security experimentation
+
+In a production environment, strict port restrictions and network segmentation would be applied.
