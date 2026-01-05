@@ -1,0 +1,9 @@
+The full 13-minute video walkthrough of this project is available here:  
+[Watch Demo Video](https://drive.google.com/file/d/1FvVgOW9-YjoIGfdAeee4U1gKR4FZxdHC/view?usp=sharing)
+
+This video covers:
+- Cloud architecture and subnet design  
+- ELK stack deployment and alert creation  
+- RDP brute-force attack simulation  
+- Mythic C2 agent execution and data retrieval  
+- Detection validation for SSH, RDP, and Mythic activity
