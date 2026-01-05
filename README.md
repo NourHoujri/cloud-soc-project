@@ -1,6 +1,6 @@
 ☁️ Cloud Engineering & Security Portfolio
 
-## 👤 About Me
+##  About Me
 I am a cloud engineering–focused student with hands-on experience designing, deploying, and operating cloud infrastructure.
 
 My primary interest is cloud engineering, with a strong focus on Linux systems, networking, and observability.  
@@ -8,7 +8,7 @@ Security is used as a supporting layer to validate that cloud environments are p
 
 ---
 
-## 🎯 Core Focus Areas
+##  Core Focus Areas
 - Cloud infrastructure engineering  
 - Linux server administration  
 - Cloud networking and subnet design  
@@ -17,7 +17,7 @@ Security is used as a supporting layer to validate that cloud environments are p
 
 ---
 
-## 🛠️ Technical Skills
+##  Technical Skills
 
 ### Cloud & Infrastructure
 - Cloud VM provisioning using Vultr  
@@ -41,7 +41,7 @@ Security is used as a supporting layer to validate that cloud environments are p
 
 ---
 
-## 📂 Featured Project: Secure Cloud Infrastructure & Observability Lab
+##  Featured Project: Secure Cloud Infrastructure & Observability Lab
 
 ### Project Overview
 This project demonstrates the design and deployment of a cloud-based lab environment focused on centralized logging, monitoring, and alerting.
@@ -50,7 +50,7 @@ Controlled attack simulations were performed to validate observability, detectio
 
 ---
 
-## 🏗️ Architecture Summary
+##  Architecture Summary
 - Cloud-hosted Linux and Windows virtual machines  
 - Segmented networking with defined subnets and IP ranges  
 - Centralized logging using the ELK Stack  
@@ -60,7 +60,7 @@ Controlled attack simulations were performed to validate observability, detectio
 
 ---
 
-## ⚔️ Attack Simulation
+##  Attack Simulation
 
 ### RDP Brute-Force Attempt
 - Simulated RDP brute-force activity against a Windows VM  
@@ -76,7 +76,7 @@ Controlled attack simulations were performed to validate observability, detectio
 
 ---
 
-## 🔍 Detection Validation
+##  Detection Validation
 
 ### SSH Authentication Detection
 - Monitored Linux authentication logs  
@@ -95,7 +95,7 @@ Controlled attack simulations were performed to validate observability, detectio
 
 ---
 
-## 🎥 Project Demonstration
+##  Project Demonstration
 This project is fully demonstrated in a recorded video walkthrough, covering:
 - Cloud architecture and subnet design  
 - ELK stack deployment and alert creation  
@@ -109,12 +109,12 @@ This project is fully demonstrated in a recorded video walkthrough, covering:
 
 ---
 
-## ⚠️ Disclaimer
+##  Disclaimer
 This project was conducted in a controlled lab environment for educational purposes only.  
 All attack simulations were performed on systems owned and authorized by the author.
 
 ---
 
-## 📫 Contact
+##  Contact
 - LinkedIn: (https://www.linkedin.com/in/med-nour-i-houjri-503085324/)  
 - GitHub: https://github.com/NourHoujri
